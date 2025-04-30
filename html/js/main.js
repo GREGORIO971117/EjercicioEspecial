@@ -1,12 +1,6 @@
+const main=document.getElementsByTagName("main").item(0);
 let btnLoad=document.getElementById("btnLoad");
 const URLMain="https://api.escuelajs.co/api/v1/products";
-
-
-btnLoad.addEventListener("click",function (event) {
-
-    
-})
-
 
 function getData(elemento) {
     const options={"method":"GET"};
@@ -33,15 +27,16 @@ function crearCard(res) {
         `
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img src="${element.image}" class="card-img-top">
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">${element.title}</h5>
+              <p class="card-text">${element.description}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-body-secondary">$ price</small>
+                <small class="text-body-secondary">${element.price}</small>
               </div>
             </div>
           </div>
@@ -50,3 +45,6 @@ function crearCard(res) {
 
     });
 }
+
+getData("");
+crearCard();
