@@ -1,7 +1,7 @@
 # Ejercicio Evaluado Especial
-Cohorte 53
-30/04/2025
-Gregorio Galindo Tehuitzil
+-Cohorte 53
+-30/04/2025
+-Gregorio Galindo Tehuitzil
 
 Ejercicio Evaluado Especial
 
